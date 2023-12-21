@@ -147,9 +147,7 @@ public class FilterUtils {
             } else {
                 System.out.println("Error: Invalid input. Please enter a valid color.");
                 pressEnterToContinue(scanner);
-                System.out.println("Please enter a color:");  // Добавлено для повторного запроса
-
-                // Прочитаем "мусор" из входного потока, чтобы избежать проблемы с дополнительными символами во входе
+                System.out.println("Please enter a color:"); 
                 if (scanner.hasNextLine()) {
                     scanner.nextLine();
                 }
@@ -160,7 +158,7 @@ public class FilterUtils {
     private static void pressEnterToContinue(Scanner scanner) {
         System.out.println("Press Enter to continue...");
         try {
-            System.in.read();  // Чтение одного символа из стандартного потока ввода
+            System.in.read();
         } catch (IOException e) {
             System.out.println("Error reading input: " + e.getMessage());
         }
